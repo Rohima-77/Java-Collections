@@ -1,0 +1,40 @@
+import java.util.HashMap;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        
+        HashMap<Integer, String> studentMap = new HashMap<>();
+
+        
+        studentMap.put(101, "Rafi");
+        studentMap.put(102, "Sadia");
+        studentMap.put(103, "Nayeem");
+        studentMap.put(104, "Tania");
+
+        
+        System.out.println("Student List:");
+        for (Integer id : studentMap.keySet()) {
+            System.out.println("ID: " + id + ", Name: " + studentMap.get(id));
+        }
+
+
+        if (studentMap.containsKey(102)) {
+            System.out.println("Student with ID 102 is: " + studentMap.get(102));
+        }
+
+        
+        studentMap.put(104, "Tanvir"); // 104 এর মান আপডেট হবে
+
+        
+        studentMap.remove(103);
+
+
+        System.out.println("\nUpdated Student List:");
+        for (Integer id : studentMap.keySet()) {
+            System.out.println("ID: " + id + ", Name: " + studentMap.get(id));
+        }
+
+        
+        System.out.println("\nTotal students: " + studentMap.size());
+    }
+}
