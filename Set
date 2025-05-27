@@ -1,0 +1,28 @@
+import java.util.HashSet;
+//Hashset removes a duplicate value
+public class HashSetExample {
+    public static void main(String[] args) {
+        
+        HashSet<String> studentNames = new HashSet<>();
+        studentNames.add("Rafi");
+        studentNames.add("Sadia");
+        studentNames.add("Nayeem");
+        studentNames.add("Sadia");
+
+        System.out.println("Students in the set:");
+        for (String name : studentNames) {
+            System.out.println(name);
+        }
+
+
+        if (studentNames.contains("Rafi")) {
+            System.out.println("Rafi is in the set.");
+        }
+
+        
+        studentNames.remove("Nayeem");
+
+        
+        System.out.println("Total students: " + studentNames.size());
+    }
+}
