@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class ListExample {
+    public static void main(String[] args) {
+        
+        List<String> names = new ArrayList<>();
+
+        names.add("Rohima");
+        names.add("Kona");
+        names.add("Sami");
+        names.add("Ila");  
+
+        System.out.println("Name List:");
+        for (String name : names) {
+            System.out.println(name);
+        }
+
+
+        names.remove("Ila");
+
+        
+        System.out.println("\nAfter removing 'Ila':");
+        for (String name : names) {
+            System.out.println(name);
+        }
+    }
+}
